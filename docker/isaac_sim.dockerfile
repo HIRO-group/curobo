@@ -171,7 +171,9 @@ RUN $omni_python -m pip install "robometrics[evaluator] @ git+https://github.com
 
 # COPY pkgs /pkgs
 
-RUN mkdir /pkgs && cd /pkgs && git clone https://github.com/NVlabs/curobo.git
+ARG GIT_CLONE_PROTECTION_ACTIVE=false
+
+RUN mkdir /pkgs && cd /pkgs && git clone https://github.com/NVlabs/curobo.git 
 
 RUN $omni_python -m pip install ninja wheel tomli
 
