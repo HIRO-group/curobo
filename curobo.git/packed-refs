@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+ed0eb7a774e14e309954f40fe137ad4807141385 refs/heads/WB/NASA
+e6a5ab2d1875a81cebcff95fb6d0037eba59843b refs/heads/fix_trajectory_evaluation
+36517b78adc578e39a180a89ac6cc03bdf8d4262 refs/heads/gb/failure
+1e0b5a80c295fb91bc4af97dc219504cba8a6f16 refs/heads/isaac-3.0
+a5940d8ffd37fd1959a0c9facfaa21f135852466 refs/heads/main
+f2eb5f937afef065214daab7e09a56e8f7880176 refs/tags/v0.6.0
+ac02893deebfaa011dda9f05167fb2709a80d408 refs/tags/v0.6.1
+1458f79a316855efde6ad314d5cffb20f10aecf0 refs/tags/v0.6.2
+b481ee201a2754c072ba9bcd80bd5d327fddc599 refs/tags/v0.7.0
+d6e600c88c9b4fbdad99f8ad3ed6ce514d309c25 refs/tags/v0.7.1
+77d60e7a542cdfef9eb8fe14fce1682d4c3a1597 refs/tags/v0.7.2
