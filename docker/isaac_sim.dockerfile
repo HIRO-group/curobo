@@ -170,9 +170,7 @@ ARG CACHE_DATE=2024-04-11
 
 # COPY pkgs /pkgs
 
-ARG GIT_CLONE_PROTECTION_ACTIVE=false
-
-RUN mkdir /pkgs && cd /pkgs && git clone https://github.com/NVlabs/curobo.git 
+RUN mkdir /pkgs && cd /pkgs && git clone https://github.com/NVlabs/curobo.git
 
 RUN $omni_python -m pip install ninja wheel tomli
 

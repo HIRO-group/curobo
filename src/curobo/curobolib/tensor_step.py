@@ -23,7 +23,7 @@ except ImportError:
     from torch.utils.cpp_extension import load
 
     # CuRobo
-    from curobo.curobolib.util_file import add_cpp_path
+    from curobo.util_file import add_cpp_path
 
     log_warn("tensor_step_cu not found, jit compiling...")
     tensor_step_cu = load(
@@ -48,6 +48,7 @@ def tensor_step_pos_clique_idx_fwd(
     dof,
     mode=-1,
 ):
+    #import pdb; pdb.set_trace()
     r = tensor_step_cu.step_idx_position2(
         out_position,
         out_velocity,
@@ -82,6 +83,7 @@ def tensor_step_pos_clique_fwd(
     dof,
     mode=-1,
 ):
+    #import pdb; pdb.set_trace()
     r = tensor_step_cu.step_position2(
         out_position,
         out_velocity,
@@ -180,6 +182,7 @@ def tensor_step_pos_clique_bwd(
     dof,
     mode=-1,
 ):
+    #import pdb; pdb.set_trace()
     r = tensor_step_cu.step_position_backward2(
         out_grad_position,
         grad_position,

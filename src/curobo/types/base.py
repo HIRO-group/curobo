@@ -15,10 +15,22 @@ from dataclasses import dataclass
 import numpy as np
 import torch
 
+import os
+
+gpu_id = os.environ.get("GPU_ID")
+if gpu_id is None:
+    if torch.cuda.is_available():
+        DEVICE_NAME = "cuda:0"
+    else:
+        DEVICE_NAME = "cpu"
+else:
+    gpu_id = int(gpu_id)
+    assert gpu_id in [0, 1]
+    DEVICE_NAME = f"cuda:{gpu_id}"
 
 @dataclass(frozen=True)
 class TensorDeviceType:
-    device: torch.device = torch.device("cuda", 0)
+    device: torch.device = torch.device("cuda", gpu_id)
     dtype: torch.dtype = torch.float32
     collision_geometry_dtype: torch.dtype = torch.float32
     collision_gradient_dtype: torch.dtype = torch.float32
