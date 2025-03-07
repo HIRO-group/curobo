@@ -253,9 +253,7 @@ class RobotWorld(RobotWorldConfig):
         q : batch, dof
         """
         state = self.get_kinematics(q)
-        d_world = self.get_collision_distance(
-            state.link_spheres_tensor.unsqueeze(1), env_query_idx=env_query_idx
-        ).squeeze(1)
+        d_world = self.get_collision_distance(state.link_spheres_tensor.unsqueeze(1), env_query_idx=env_query_idx).squeeze(1)
         d_self = self.get_self_collision_distance(state.link_spheres_tensor.unsqueeze(1)).squeeze(1)
         return d_world, d_self
 

@@ -2736,7 +2736,7 @@ class MotionGen(MotionGenConfig):
                 .feasible.squeeze(1)
                 .item()
             )
-
+            breakpoint()
             if not self_collision_free:
                 return valid_query, MotionGenStatus.INVALID_START_STATE_SELF_COLLISION
             status = MotionGenStatus.INVALID_START_STATE_UNKNOWN_ISSUE
